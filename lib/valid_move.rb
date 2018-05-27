@@ -11,9 +11,7 @@ end
 
 
 def valid_move?(array, index)
-  if array[index] == " " ||
-    array[index] == "" ||
-    array[index] == nil &&
+  if !position_taken?(array, index) &&
     index.between?(0,8)
       return true
   else
